@@ -12,3 +12,7 @@ Atleast Keep my at levels minimum at 5 so that way , i would not be too hungry o
 Notes:
 Guidance:
 Going to focus on Setting a timer so it stops and write functions so the game ca run
+
+
+
+<h1> Enjoy The Game </h1>
