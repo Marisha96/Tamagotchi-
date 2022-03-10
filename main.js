@@ -14,13 +14,13 @@ class Tamago {
         this.boredom =  7
     }
 feedPet() {
-
+this.hunger--
 }
  boredPet() {
-
+this.boredom--
  }
  SleepyPet() {
-     
+     this.sleepiness = this.sleepiness - 3
  }
 }
 
