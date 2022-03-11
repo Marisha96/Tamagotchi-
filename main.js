@@ -46,7 +46,7 @@ function ageCount() {
       // stop the timer if any of the above condition satsfies
           clearInterval(ageCounter);
   // time interval is set as 1 minute
-  }, 1000); 
+  }, 2000); 
 }
 
 // function to increment the hunger
@@ -71,16 +71,15 @@ function boreCount() {
   boreCounter = setInterval(function () {
       bore++;
       bone.innerText = "Bore: " + bore;
-      if (bore == 10)
+      if (bore == 20)
           // if the value of bore reaches the value 10 first then display the message 
-          document.getElementById("tam").src="images/sleepy.jpeg"
           petAlive.innerText = "Your pet died of boredom. ";
-          
-          if (hunger == 10 || bore == 10 || sleep == 10)
+          document.getElementById("tam").src="images/sleepy.jpeg"
+          if (hunger == 20 || bore == 15 || sleep == 15)
           // stop the timer if any of the above condition satsfies
           clearInterval(boreCounter);
   // time interval is set as 1 second
-  }, 1000);
+  }, 3000);
 }
 
 // function to increment the sleep
@@ -88,16 +87,16 @@ function sleepCount() {
   sleepCounter = setInterval(function () {
       sleep++;
       rest.innerText = "Rest: " + sleep;
-      if (sleep == 10) 
+      if (sleep == 20) 
       // if the value of bore reaches the value 10 first then display the message 
-      document.getElementById("tam").src="images/sleepy.jpeg"
-      petAlive.innerText = "Your pet is tired. ";
+     
+      petAlive.innerText = "Your pet is tired.";
           if (hunger == 10 || bore == 10 || sleep == 10)
           
           // stop the timer if any of the above condition satsfies
           clearInterval(sleepCounter);
   // time interval is set as 2 seconds
-  }, 1000);
+  }, 2000);
 }
 
 // decrement the value of hunger when the feed button is pressed
