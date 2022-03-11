@@ -82,3 +82,52 @@ function boreCount() {
   // time interval is set as 1 second
   }, 1000);
 }
+
+// function to increment the sleep
+function sleepCount() {
+  sleepCounter = setInterval(function () {
+      sleep++;
+      rest.innerText = "Rest: " + sleep;
+      if (sleep == 10) 
+      // if the value of bore reaches the value 10 first then display the message 
+      document.getElementById("tam").src="images/sleepy.jpeg"
+      petAlive.innerText = "Your pet is tired. ";
+          if (hunger == 10 || bore == 10 || sleep == 10)
+          
+          // stop the timer if any of the above condition satsfies
+          clearInterval(sleepCounter);
+  // time interval is set as 2 seconds
+  }, 1000);
+}
+
+// decrement the value of hunger when the feed button is pressed
+function feedClick() {
+  hunger--;
+  hungry.innerText = "Hunger: " + hunger;
+};
+
+// decrement the value of sleep when the turn off lights button is pressed
+function sleepClick() {
+  sleep--;
+  rest.innerText = "Rest: " + sleep;
+};
+
+// decrement the value of bore when the play button is pressed
+function playClick() {
+  bore--;
+  bone.innerText = "Bore: " + bore;
+};
+
+// reset all value when the reset button is pressed
+function resetClick() {
+  hunger = 0
+  bore = 0
+  sleep = 0
+  agePet = 0
+  hungry.innerText = "Hunger: " + hunger;
+  bone.innerText = "Bore: " + bore;
+  rest.innerText = "Rest: " + sleep;
+  age.innerText = "Age: " + agePet;
+  // recursive call of main function to play the game infinitely
+  main()
+};
