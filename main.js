@@ -1,3 +1,6 @@
+let myName = window.prompt("enter name please?");
+console.log("Hello", myName );
+
 
 let agePet = 0
 let hunger = 0
