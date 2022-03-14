@@ -2,7 +2,7 @@ function myName() {
   let tamaName = prompt("Please enter your name", "");
   if (tamaName != null) {
     document.getElementById("tama").innerHTML =
-      "Hello " + tamaName + "! Are you ready to plays?";
+      "Hello " + tamaName + "! Are you ready to play?";
   } 
   main()
 } 
@@ -76,7 +76,7 @@ function hungerCount() {
     // if the value of boredom reaches the value 10 first then display the message 
     petAlive.innerText = " Tama died of hunger. ";
     document.getElementById("tam").src = "images/cry.jpeg"
-    if (hunger == 10 || bore == 10 || sleep == 10)
+    if (hunger == 10 || bore == 10 || sleep == 8)
       // stop the timer if any of the above condition satsfies
       clearInterval(hungerCounter);
     // time interval is set as .5 seconds
@@ -90,13 +90,13 @@ function boreCount() {
   boreCounter = setInterval(function () {
     bore++;
     bone.innerText = "Bore: " + bore;
-    if (bore == 20)
+    if (bore == 10)
       boredom.innerText = "Boredom: " + bore;
     if (bore == 6)
       // if the value of bore reaches the value 10 first then display the message 
       petAlive.innerText = "Your pet died of boredom. ";
     document.getElementById("tam").src = "images/sleepy.jpeg"
-    if (hunger == 20 || bore == 15 || sleep == 15)
+    if (hunger == 10 || bore == 10 || sleep == 10)
       petAlive.innerText = "Tama died of boredom. ";
 
     if (hunger == 7 || bore == 10 || sleep == 4)
@@ -112,14 +112,14 @@ function boreCount() {
 function sleepCount() {
   sleepCounter = setInterval(function () {
     sleep++;
-    rest.innerText = "Rest: " + sleep;
-    if (sleep == 20)
-      sleepiness.innerText = "Sleepiness: " + sleep;
+    sleepiness.innerText = "Sleepiness: " + sleep;
     if (sleep == 10)
+      sleepiness.innerText = "Sleepiness: " + sleep;
+    if (sleep == 8)
       // if the value of bore reaches the value 10 first then display the message 
 
       petAlive.innerText = "Your pet is tired.";
-    if (hunger == 10 || bore == 10 || sleep == 10)
+    if (hunger == 10 || bore == 10 || sleep == 8)
       petAlive.innerText = " Tama is tired.";
     document.getElementById("tam").src = "images/sleepy.jpeg"
     if (hunger == 3 || bore == 8 || sleep == 10)
